@@ -38,17 +38,20 @@
                        (assoc results score 1)))]
     (reduce tally-score {} scores)))
 
-(defn chart-scores
+(defn chart-lines
   "Given a list of scores, print a simple ASCII frequency graph"
   [scores]
   (let [tally (tally-scores scores)
         low (apply min (keys tally))
         high (apply max (keys tally))
-        r (inc (max (Math/abs low) high))]
-    (doseq [val (range (- r) (inc r))]
-      (print val)
-      (print "\t")
-      (if-let [c (tally val)]
-        (print (join (repeat c "*"))))
-      (println)
-    )))
+        r (inc (max (Math/abs low) high))
+        chart-line (fn [val]
+                     (str val
+                          "\t"
+                          (if-let [c (tally val)]
+                            (join (repeat c "*")))))]
+    (map chart-line (range (- r) (inc r)))))
+
+(defn chart-scores
+  [scores]
+  (print (join "\n" (chart-lines scores))))
