@@ -1,3 +1,4 @@
+(ns coin-tosser.simple)
 (use '[clojure.string :only (join)])
 
 (defn coin-toss
