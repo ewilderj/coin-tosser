@@ -1,13 +1,17 @@
 Simple coin tosser
 ==================
 
-Simulate the results of a coin toss experiment.
+Simulate the results of a coin toss experiment. If a coin lands heads
+you win a dollar, if it lands tails you lose a dollar.
 
-Run like this, e.g.
+Build and run like this
 
+    $ lein compile
     $ lein run 200 20
 
-This executes `(chart-scores (sample-scores 200 20))` and yields
+This executes `(chart-scores (sample-scores 200 20))` and yields something like
+the following chart, simulating 200 runs of 20 coin tosses. The chart shows the
+frequency of your net winnings after each run.
 
     -13	
     -12	*
