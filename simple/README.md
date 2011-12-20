@@ -1,4 +1,5 @@
-h1. Simple coin tosser
+Simple coin tosser
+==================
 
 Simulate the results of a coin toss experiment.
 
@@ -36,7 +37,8 @@ This executes `(chart-scores (sample-scores 200 20))` and yields
     12	
     13	
 
-h2. Build instructions
+Build instructions
+------------------
 
 Ensure you have Clojure and Leiningen installed, and the project will
 compile with `lein compile`.
