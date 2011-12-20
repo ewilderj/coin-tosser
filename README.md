@@ -14,6 +14,12 @@ This program runs the game Taleb describes.
 * clojure/ -- a simple Clojure command line implementation
 * clojurescript -- a web based demonstration
 
+About the author
+----------------
+
+Edd Dumbill enjoys tinkering.
+[Connect with Edd via Google+](http://edd.me/ongplus).
+
 Further reading
 ---------------
 
