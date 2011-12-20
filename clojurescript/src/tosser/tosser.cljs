@@ -1,6 +1,7 @@
 (ns tosser.tosser
-  (:use [tosser.core :only [chart-lines sample-scores]])
-  (:use [clojure.string :only [join]]))
+  (:require [tosser.core :as toss]
+            [clojure.string :as string]
+            ))
 
 (defn ^{:export chart} chart [m n]
-  (join "\n" (chart-lines m n)))
+  (string/join "\n" (toss/chart-lines (toss/sample-scores m n))))

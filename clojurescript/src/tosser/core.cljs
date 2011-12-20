@@ -1,5 +1,5 @@
-(ns tosser.core)
-(use '[clojure.string :only (join)])
+(ns tosser.core
+  (:require [clojure.string :as string]))
 
 (defn coin-toss
   "Tosses a fair coin and returns true for heads, false for tails"
@@ -21,7 +21,7 @@
   [n]
   (count-winnings (repeatedly n coin-toss)))
 
-(defn sample-scores
+(defn ^:export sample-scores
   "Run a sequence of experiments n times with m tosses"
   [n m]
   (repeatedly n #(sample-score m)))
@@ -38,7 +38,7 @@
                        (assoc results score 1)))]
     (reduce tally-score {} scores)))
 
-(defn chart-lines
+(defn ^:export chart-lines
   "Given a list of scores, print a simple ASCII frequency graph"
   [scores]
   (let [tally (tally-scores scores)
@@ -49,5 +49,5 @@
                      (str val
                           "\t"
                           (if-let [c (tally val)]
-                            (join (repeat c "*")))))]
+                            (string/join (repeat c "*")))))]
     (map chart-line (range (- r) (inc r)))))

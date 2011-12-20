@@ -1,0 +1,31 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head><title>Coin Toss Demo</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="out/goog/base.js"></script>
+    <script type="text/javascript" src="tosser.js"></script>
+    <script type="text/javascript" src="ui.js"></script>
+    <script type="text/javascript">
+      goog.require('tosser.tosser');
+    </script>
+    <style type="text/css">
+      body { font-size: 10pt; font-family: Arial,Helvetica,sans-serif; }
+      pre { background: #eeeeee; padding: 1em; border: 1px solid black;}
+      #input_form { background: #eeeeff; margin: 0; padding: 1em; border: 1px solid black;}
+      label { font-weight: bold; font-size: 90%; }
+    </style>
+  </head>
+  <body>
+    <h3>Coin Toss Demo</h3>
+    <p><a href="https://github.com/edumbill/coin-tosser">Source code</a></p>
+    <div id="input_form">
+      <form id="toss_form" action="">
+	<p><label for="tosses">Number of tosses</label><br />
+	<input id="tosses" type="text" value="20" /></p>
+	<p><label for="runs">Number of runs</label><br />
+	<input id="runs" type="text" value="200" /></p>
+	<p><input id="start_tossing" type="submit" value="Run simulation" /></p>
+      </form>
+    </div>
+    <pre id="results">Results will appear here</pre>
+  </body>
+</html>
