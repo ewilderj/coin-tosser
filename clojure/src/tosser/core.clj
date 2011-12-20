@@ -39,7 +39,7 @@
     (reduce tally-score {} scores)))
 
 (defn chart-lines
-  "Given a list of scores, print a simple ASCII frequency graph"
+  "Given a list of scores, create a simple ASCII frequency graph"
   [scores]
   (let [tally (tally-scores scores)
         low (apply min (keys tally))
