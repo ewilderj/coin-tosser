@@ -6,7 +6,7 @@ Run like this, e.g.
 
     $ lein run 200 20
 
-eg. (chart-scores (sample-scores 200 20)) will yield:
+This executes `(chart-scores (sample-scores 200 20))` and yields
 
     -13	
     -12	*
@@ -35,3 +35,9 @@ eg. (chart-scores (sample-scores 200 20)) will yield:
     11	
     12	
     13	
+
+h2. Build instructions
+
+Ensure you have Clojure and Leiningen installed, and the project will
+compile with `lein compile`.
+
