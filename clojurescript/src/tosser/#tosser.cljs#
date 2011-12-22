@@ -10,5 +10,5 @@
 
 ;;; uncomment to connect the REPL from the browser
 ;;; see https://github.com/clojure/clojurescript/wiki/The-REPL-and-Evaluation-Environments
-;;; (repl/connect "http://localhost:9000/repl")
+(repl/connect "http://localhost:9000/repl")
 

@@ -54,4 +54,4 @@
 
 (defn chart-scores
   [scores]
-  (print (join "\n" (chart-lines scores))))
+  (println (join "\n" (chart-lines scores))))
