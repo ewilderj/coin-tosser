@@ -3,3 +3,4 @@
 */out
 */.repl
 clojure/*.jar
+dart/*.app.js
