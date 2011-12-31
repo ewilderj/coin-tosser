@@ -12,7 +12,8 @@ of each amount: you get a Gaussian "bell curve".
 This program runs the game Taleb describes.
 
 * clojure/ -- a simple Clojure command line implementation
-* clojurescript -- a web based demonstration
+* clojurescript/ -- a web based demonstration in ClojureScript
+* dart/ -- a web based demonstration in Dart
 
 About the author
 ----------------
